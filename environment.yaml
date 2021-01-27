@@ -20,8 +20,9 @@ dependencies:
   - pip:
     - kaggle
     - plotly_express
+    - tensorflow==2.2.0rc0
 
 # Environment variables
 variables:
-  IBM_API_KEY_ID: XXXXXX
-  IBM_OBJECT_STORE_BUCKET: XXXXXX 
+  IBM_API_KEY_ID: XXXXX 
+  IBM_OBJECT_STORE_BUCKET: XXXXX
