@@ -1,4 +1,4 @@
-Twitter Desaster Detection
+Twitter Disaster Detection
 ==========================
 
 This repository contains my submission to the
