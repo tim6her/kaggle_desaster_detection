@@ -69,3 +69,9 @@ scratch/
 
 # Documentation
 *.pdf
+
+# Output
+presentation/work
+*.csv
+*.parquet
+presentation/disaster_detection_*/
