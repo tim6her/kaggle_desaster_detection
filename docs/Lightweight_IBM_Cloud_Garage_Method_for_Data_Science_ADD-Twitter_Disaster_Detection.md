@@ -134,6 +134,7 @@ visualization of tables, `pyspark.sql.DataFrame`-s are transformed into
 transformation). Interactive visualizations are created using *Plotly*.
 Metrics are calculated using the *Apache Spark* API whenever possible.
 
+
 Justification
 -------------
 
@@ -146,6 +147,17 @@ Justification
 -   Calculating metrics directly using the *Apache Spark* API leverages
     the native vertical scalability of `pyspark.sql.DataFrame`-s or
     `pyspark.RDD`-s respectively.
+
+Why have I chosen a specific method for data quality assessment?
+----------------------------------------------------------------
+
+| Measure              | Justification                                       |
+| -------------------- | --------------------------------------------------- |
+| Exploring the schema | Quick explorative measure to find errors in parsing |
+| Summary statistics   | Quick explorative measure to find errors in parsing |
+| Word count           | Identify need to drop stop words                    |
+| Locations per label  | Identify unexplainable correlation ⇒ drop feature   |
+| Keyword per label    | Identify unexplainable correlation ⇒ drop feature   |
 
 Actionable Insights
 ===================
@@ -173,6 +185,35 @@ Justification
     configured accordingly).
 -   All frameworks allow for efficient serialization and loading of
     models.
+
+
+Why have I chosen a specific method for feature engineering?
+------------------------------------------------------------
+
+| Method            | Justification                                 |
+| ----------------- | --------------------------------------------- |
+| `CountVectorizer` | Easy interpretation by business stakeholders  |
+| `TF-IDF`          | Proven method in NLP (still interpretable)    |
+| `Word2Vec`        | NN method that is well studied and documented |
+
+Why have I chosen a specific algorithm?
+---------------------------------------
+
+| Algorithm           | Justification                                  |
+| ------------------- | ---------------------------------------------- |
+| Logisitc Regression | Baseline classifier with interpretable weights |
+| Naive Bayes         | Cookiecutter text classifier                   |
+| CNN                 | Deep learning model for comparison             |
+
+Why have I chosen a specific model performance indicator?
+---------------------------------------------------------
+
+| Indicator | Justification                          |
+| --------- | -------------------------------------- |
+| Accuracy  | Interpretable by business stakeholders |
+| Recall    | Interpretable by business stakeholders |
+| Precision | Interpretable by business stakeholders |
+| F1-score  | Used by *Kaggle* to score submission   |
 
 Applications / Data Products
 ============================
