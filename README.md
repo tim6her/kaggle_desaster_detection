@@ -17,4 +17,7 @@ The data is provided by *Kaggle* which describes the challenge as follows:
 > — (Project desription by 
 > [Kaggle](https://www.kaggle.com/c/nlp-getting-started/overview))
 
+Watch my Presentation of the Project on Vimeo
+---------------------------------------------
 
+[![Video Persentation of the Project](https://i.vimeocdn.com/video/1055657935_960x518.jpg)](https://vimeo.com/509958167)
